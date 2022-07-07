@@ -1,0 +1,100 @@
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 20%;
+  height: 50%;
+  background-color: cornflowerblue;
+  border: 10px solid cornflowerblue;
+}
+
+.panel {
+  width: 100%;
+  height: 25%;
+  font-size: 20px;
+  line-height: 26px;
+  padding: 10px;
+}
+
+.operations {
+  display: flex;
+  gap: 3px;
+  height: 15%;
+}
+
+.operations__item {
+  width: calc(100% / 4);
+  font-size: 20px;
+  height: 100%;
+}
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  height: 60%;
+}
+
+.numbers__item {
+  width: calc(100% / 3 - 2px);
+  height: calc(100% / 4 - 9px);
+}
+
+.submit {
+  position: absolute;
+  width: calc(100% - 67.5%);
+  height: calc(100% - 87.7%);
+  right:  calc(100% - 66.5%);
+  bottom: 6px;
+}
+
+.clear {
+  position: absolute;
+  width: calc(100% - (67.5%));
+  height: calc(100% - 87.7%);
+  right: 0px;
+  bottom: 6px;
+}
+
+.text {
+  font-size: 16px;
+  text-align: justify;
+  width: 70px;
+}
+
+.voice {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -35%);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.voice__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
