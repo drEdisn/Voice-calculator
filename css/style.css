@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
 body {
+  font-family: 'Albert Sans', sans-serif;
   height: 100vh;
   width: 100%;
 }
 
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(83, 83, 83);
+}
+
 .container {
+  position: relative;
   max-width: 1280px;
   height: 100%;
   margin: 0 auto;
@@ -16,59 +26,110 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: end;
   gap: 5px;
-  width: 20%;
-  height: 50%;
-  background-color: cornflowerblue;
-  border: 10px solid cornflowerblue;
+  width: 280px;
+  height: 400px;
+  background-color: rgb(61, 61, 61);
+  border: 10px solid rgb(61, 61, 61);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.46), 0 1px 5px 0 rgba(0, 0, 0, 0.575), 0 3px 1px -2px rgba(0, 0, 0, 0.805);
 }
 
 .panel {
-  width: 100%;
-  height: 25%;
+  width: 260px;
+  height: 50px;
   font-size: 20px;
   line-height: 26px;
   padding: 10px;
+  background-color: rgb(123, 123, 123);
+  color: white;
+  outline: 0;
+}
+
+.title {
+  font-size: 25px;
+  color: white;
+  align-self: start;
+  margin: 10px;
 }
 
 .operations {
   display: flex;
-  gap: 3px;
-  height: 15%;
+  gap: 10px;
+  margin: 5px 0;
+  height: 50px;
 }
 
 .operations__item {
-  width: calc(100% / 4);
-  font-size: 20px;
-  height: 100%;
+  width: 50px;
+  font-size: 25px;
+  border-radius: 40px;
+  color: white;
+  background-color: rgb(92, 92, 92);
+  border: 1px solid rgb(49, 48, 48);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.46), 0 1px 5px 0 rgba(0, 0, 0, 0.575), 0 -3px 1px -2px rgba(0, 0, 0, 0.805);
+  height: 50px;
+  transition: 0.3s;
 }
 
 .numbers {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
-  height: 60%;
+  margin-left: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 210px;
+  width: 250px;
 }
 
 .numbers__item {
-  width: calc(100% / 3 - 2px);
-  height: calc(100% / 4 - 9px);
+  width: 50px;
+  font-size: 25px;
+  border-radius: 40px;
+  color: white;
+  background: rgb(92, 92, 92);
+  border: 1px solid rgb(49, 48, 48);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.46), 0 1px 5px 0 rgba(0, 0, 0, 0.575), 0 -3px 1px -2px rgba(0, 0, 0, 0.805);
+  height: 50px;
+  transition: 0.3s;
 }
 
 .submit {
   position: absolute;
-  width: calc(100% - 67.5%);
-  height: calc(100% - 87.7%);
-  right:  calc(100% - 66.5%);
   bottom: 6px;
+  right: 75px;
+  width: 50px;
+  font-size: 25px;
+  border-radius: 40px;
+  color: white;
+  background: rgb(92, 92, 92);
+  border: 1px solid rgb(49, 48, 48);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.46), 0 1px 5px 0 rgba(0, 0, 0, 0.575), 0 -3px 1px -2px rgba(0, 0, 0, 0.805);
+  height: 50px;
+  transition: 0.3s;
 }
 
 .clear {
   position: absolute;
-  width: calc(100% - (67.5%));
-  height: calc(100% - 87.7%);
-  right: 0px;
+  right: 15px;
   bottom: 6px;
+  min-width: 50px;
+  font-size: 25px;
+  border-radius: 40px;
+  color: white;
+  background: rgb(92, 92, 92);
+  border: 1px solid rgb(49, 48, 48);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.46), 0 1px 5px 0 rgba(0, 0, 0, 0.575), 0 -3px 1px -2px rgba(0, 0, 0, 0.805);
+  height: 50px;
+  transition: 0.3s;
+}
+
+
+.button:hover {
+  box-shadow: inset 1px 2px 5px 0 rgba(0, 0, 0, 0.46), inset 0 1px 5px 0 rgba(0, 0, 0, 0.575),inset 1px 3px 1px 2px rgba(0, 0, 0, 0.805);
 }
 
 .text {
@@ -79,22 +140,27 @@ body {
 
 .voice {
   position: absolute;
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -35%);
-  width: 100px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.voice__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  cursor: pointer;
+  top: -5px;
+  right: 0px;
+  /* transform: translate(-50%, -35%); */
   height: 50px;
   width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.voice:hover {
+  filter: drop-shadow(1px 2px 3px white);
+}
+
+.voise__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  fill: white;
 }

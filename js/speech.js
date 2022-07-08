@@ -36,6 +36,7 @@ export default class Speech {
 
   say = (text, speech) => {
     const utter = new SpeechSynthesisUtterance();
+    if (text === 'CE') {text = 'Clear';}
     utter.text = this.operation[text] !== undefined ? this.operation[text] : text;
     utter.voice = this.getVoice(speech);
     utter.pitch = 1;

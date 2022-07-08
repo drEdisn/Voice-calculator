@@ -16,6 +16,7 @@ export default class Voice {
     voice.onclick = () => recognition.start();
 
     recognition.onresult = (event) => {
+      console.log(event.results)
       const strArr = event.results[0][0].transcript.split(' ');
       const str = strArr.map(i => i == 'х' || i == 'x' ? i = '*' : i).join(' ');
       const res = Math.trunc(eval(str));
